@@ -26,7 +26,7 @@ Extracts the data for this plot:
 
 |Output|
 
-See the examples folder for more information. (Figure courtesy Du et al., https://dx.doi.org/10.3201/eid2606.200357) 
+See the examples folder for more information. (Figure courtesy Du et al., https://www.medrxiv.org/content/10.1101/2020.02.19.20025452v4) 
 
 .. |Input| image:: examples/du_fig1a_annotated.png 
 .. |Output| image:: examples/example-output.png

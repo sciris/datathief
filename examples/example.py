@@ -3,9 +3,9 @@ Illustrate example usage of Datathief.
 
 Figure from:
 
-    Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Meyers L. Serial Interval of COVID-19
-    among Publicly Reported Confirmed Cases. Emerg Infect Dis. 2020;26(6):1341-1343.
-    https://dx.doi.org/10.3201/eid2606.200357
+    Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Meyers L.
+    Serial Interval of COVID-19 among Publicly Reported Confirmed Cases.
+    https://www.medrxiv.org/content/10.1101/2020.02.19.20025452v4
 '''
 
 import pylab as pl
