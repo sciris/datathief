@@ -4,6 +4,16 @@ Datathief
 
 Small utility for retrieving data from figures. Inspired by the `Java package of the same name <https://datathief.org/>`__.
 
+
+Installation
+------------
+
+The usual: ``pip install datathief``.
+
+
+Usage
+-----
+
 Unlike the Java DataThief package and similar online tools, here the user *manually* annotates the figure with the data points of their choosing. This makes it more transparent how the data are being read and makes the results more reproducible. However, it might be annoying for a large amount of data.
 
 To use this tool, first annotate the plot by adding a **single pixel** at the start and end of the x-axis in a specified color that does not exist anywhere else in the image (default color: pure blue). Do the same for the y-axis (default color: pure red). Then one pixel for each data point you wish to extract (default color: pure green). This function will then return the x and y coordinates of each data point. It will warn you if too many or too few pixels are detected.
