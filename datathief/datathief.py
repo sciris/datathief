@@ -103,10 +103,10 @@ def datathief(filename, xlim=None, ylim=None, xcol=None, ycol=None, dcol=None, d
 
         if debug:
             print('\n\nFor variable:\n ', k)
-            print(f'{perpix=}')
-            print(f'Original:\n {orig=}')
-            print(f'Removing reference:\n {rmref=}')
-            print(f'By pixel:\n {bypix=}')
-            print(f'Adding limit:\n {data[k]=}')
+            print(f'perpix={perpix}')
+            print(f'Original:\n orig={orig}')
+            print(f'Removing reference:\n rmref={rmref}')
+            print(f'By pixel:\n bypix={bypix}')
+            print(f'Adding limit:\n data={data[k]}')
 
     return data

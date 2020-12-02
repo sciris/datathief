@@ -7,10 +7,13 @@ For further information, see the README.
 '''
 
 import os
+import runpy
 from setuptools import setup, find_packages
 
 # Get version
-version = '0.1'
+cwd = os.path.abspath(os.path.dirname(__file__))
+versionpath = os.path.join(cwd, 'datathief', 'version.py')
+version = runpy.run_path(versionpath)['__version__']
 
 # Get the documentation
 with open(os.path.join(os.getcwd(), 'README.rst'), "r") as fh:
