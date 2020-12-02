@@ -2,7 +2,7 @@
 Datathief
 =========
 
-Small utility for retrieving data from figures. Inspired by the Java package of the same name.
+Small utility for retrieving data from figures. Inspired by the `Java package of the same name <https://datathief.org/>`__.
 
 Unlike the Java DataThief package and similar online tools, here the user *manually* annotates the figure with the data points of their choosing. This makes it more transparent how the data are being read and makes the results more reproducible. However, it might be annoying for a large amount of data.
 
