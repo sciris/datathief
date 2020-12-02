@@ -1,3 +1,13 @@
+# Custom -- docs build files
+docs/covasim*.rst
+docs/modules.rst
+
+# Data files
+data/epi_data
+
+# Other files
+.idea
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -64,6 +74,7 @@ db.sqlite3-journal
 # Flask stuff:
 instance/
 .webassets-cache
+*.out
 
 # Scrapy stuff:
 .scrapy
@@ -127,3 +138,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Node.js and NPM
+node_modules
