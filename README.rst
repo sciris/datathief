@@ -38,5 +38,7 @@ Extracts the data for this plot:
 
 See the examples folder for more information. (Figure courtesy Du et al., https://www.medrxiv.org/content/10.1101/2020.02.19.20025452v4) 
 
+More questions? Email info@sciris.org.
+
 .. |Input| image:: examples/du_fig1a_annotated.png 
 .. |Output| image:: examples/example-output.png
