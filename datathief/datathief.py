@@ -81,13 +81,13 @@ def datathief(filename, xlim=None, ylim=None, xcol=None, ycol=None, dcol=None, d
     d.x, d.y = findpixels(img, dcol)
     ref.y = np.sort(img.shape[0] - ref.y) # Flip y-axis
     d.y = img.shape[0] - d.y # Flip y-axis
-    assert len(ref.x) == 2, f'Wrong number of x coordinates found (len(ref.x)): please ensure exactly 2 pixels have color {xcol}'
-    assert len(ref.y) == 2, f'Wrong number of y coordinates found (len(ref.y)): please ensure exactly 2 pixels have color {ycol}'
+    assert len(ref.x) == 2, f'Wrong number of x coordinates found ({len(ref.x)}): please ensure exactly 2 pixels have color {xcol}'
+    assert len(ref.y) == 2, f'Wrong number of y coordinates found ({len(ref.y)}): please ensure exactly 2 pixels have color {ycol}'
 
     if debug:
-        print(f'{img.shape=}')
-        print(f'{ref=}')
-        print(f'{d=}')
+        print(f'Image shape: {img.shape}')
+        print(f'Reference pixels: {ref}')
+        print(f'Data pixels: {d}')
 
     # Process data
     data = sc.objdict()
@@ -103,7 +103,7 @@ def datathief(filename, xlim=None, ylim=None, xcol=None, ycol=None, dcol=None, d
 
         if debug:
             print('\n\nFor variable:\n ', k)
-            print(f'perpix={perpix}')
+            print(f'Pixels-per-value: {1.0/perpix}; pixel ratio: {perpix}')
             print(f'Original:\n orig={orig}')
             print(f'Removing reference:\n rmref={rmref}')
             print(f'By pixel:\n bypix={bypix}')
