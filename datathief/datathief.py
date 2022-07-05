@@ -81,8 +81,16 @@ def datathief(filename, xlim=None, ylim=None, xcol=None, ycol=None, dcol=None, d
     d.x, d.y = findpixels(img, dcol)
     ref.y = np.sort(img.shape[0] - ref.y) # Flip y-axis
     d.y = img.shape[0] - d.y # Flip y-axis
-    assert len(ref.x) == 2, f'Wrong number of x coordinates found ({len(ref.x)}): please ensure exactly 2 pixels have color {xcol}'
-    assert len(ref.y) == 2, f'Wrong number of y coordinates found ({len(ref.y)}): please ensure exactly 2 pixels have color {ycol}'
+    cols = dict(x=xcol, y=ycol)
+    coords = sc.objdict()
+    coords.x = sorted(zip(ref.x, tmp_xy))
+    coords.y = sorted(zip(tmp_yx, ref.y))
+    for k in ['x', 'y']:
+        n = len(ref[k])
+        if n != 2:
+            extra = '' if n < 2 else f'\nLocations of {k} coordinates: {coords[k]}'
+            errormsg = f'Wrong number of {k} coordinates found ({n}): please ensure exactly 2 pixels have color {cols[k]}{extra}'
+            raise RuntimeError(errormsg)
 
     if debug:
         print(f'Image shape: {img.shape}')
